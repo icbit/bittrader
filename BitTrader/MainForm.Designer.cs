@@ -40,9 +40,14 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblusd = new System.Windows.Forms.Label();
             this.lblbtc = new System.Windows.Forms.Label();
+            this.dataOrderBook = new System.Windows.Forms.DataGridView();
+            this.Sell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Buy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stockChart)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataOrderBook)).BeginInit();
             this.SuspendLayout();
             // 
             // stockChart
@@ -86,7 +91,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnLogin);
-            this.groupBox1.Location = new System.Drawing.Point(627, 31);
+            this.groupBox1.Location = new System.Drawing.Point(33, 412);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(206, 113);
             this.groupBox1.TabIndex = 3;
@@ -125,7 +130,7 @@
             // 
             this.groupBox4.Controls.Add(this.lblusd);
             this.groupBox4.Controls.Add(this.lblbtc);
-            this.groupBox4.Location = new System.Drawing.Point(627, 150);
+            this.groupBox4.Location = new System.Drawing.Point(245, 415);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(203, 104);
             this.groupBox4.TabIndex = 10;
@@ -152,11 +157,50 @@
             this.lblbtc.TabIndex = 6;
             this.lblbtc.Text = "BTC: 00.00000000";
             // 
+            // dataOrderBook
+            // 
+            this.dataOrderBook.AllowUserToAddRows = false;
+            this.dataOrderBook.AllowUserToDeleteRows = false;
+            this.dataOrderBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataOrderBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Sell,
+            this.Price,
+            this.Buy});
+            this.dataOrderBook.Location = new System.Drawing.Point(620, 31);
+            this.dataOrderBook.Name = "dataOrderBook";
+            this.dataOrderBook.ReadOnly = true;
+            this.dataOrderBook.RowHeadersVisible = false;
+            this.dataOrderBook.ShowEditingIcon = false;
+            this.dataOrderBook.Size = new System.Drawing.Size(213, 498);
+            this.dataOrderBook.TabIndex = 11;
+            // 
+            // Sell
+            // 
+            this.Sell.HeaderText = "Sell Qty";
+            this.Sell.Name = "Sell";
+            this.Sell.ReadOnly = true;
+            this.Sell.Width = 70;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 70;
+            // 
+            // Buy
+            // 
+            this.Buy.HeaderText = "Buy Qty";
+            this.Buy.Name = "Buy";
+            this.Buy.ReadOnly = true;
+            this.Buy.Width = 70;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 490);
+            this.ClientSize = new System.Drawing.Size(845, 541);
+            this.Controls.Add(this.dataOrderBook);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.stockChart);
@@ -167,6 +211,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataOrderBook)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,6 +228,10 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblusd;
         private System.Windows.Forms.Label lblbtc;
+        private System.Windows.Forms.DataGridView dataOrderBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Buy;
     }
 }
 
