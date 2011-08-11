@@ -18,16 +18,14 @@ namespace BitTrader
         }
 
 
-        string HttpPost(string uri, string parameters)
+        public static string HttpPost(string uri, string parameters)
         {
             // parameters: name1=value1&name2=value2	
             //System.Net.ServicePointManager.CertificatePolicy = new MyPolicy();
             ServicePointManager.MaxServicePointIdleTime = 200;
-            WebRequest webRequest = WebRequest.Create(uri);
+            HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(uri);
             //webRequest.UserAgent = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.21 (KHTML, like Gecko) Chrome/11.0.682.0 Safari/534.21";
-            ((HttpWebRequest)webRequest).UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)";
-
-
+            webRequest.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)";
 
             //string ProxyString = 
             //   System.Configuration.ConfigurationManager.AppSettings
