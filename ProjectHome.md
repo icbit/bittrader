@@ -1,0 +1,1 @@
+A trading client which supports major bitcoin exchange markets. Features include charting, order submitting/editing, etc
